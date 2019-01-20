@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<!-- some content from demos: http://demos.jquerymobile.com/1.4.5/
+-->
+<html>
+<head>
+	<title>jQuery Mobile Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="page1" >
+	 <div data-role="header">
+		<h1>Page One</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page1" class="ui-btn-active ui-state-persist">One</a></li>
+				<li><a href="#page2">Two</a></li>
+				<li><a href="#page3">Three</a></li>
+			</ul>
+		</div>
+	 </div>
+		<div role="main" class="ui-content">
+			<p>I'm first in the source order so I'm shown as the page.</p>
+			<p>View internal page called <a href="#page2">Page Two</a></p>
+		</div>
+
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div>
+	</div>
+
+<!-- Start of second page -->
+	<div data-role="page" id="page2">
+
+		<div data-role="header">
+			<h1>Page Two</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1">One</a></li>
+					<li><a href="#page2" class="ui-btn-active ui-state-persist">Two</a></li>
+					<li><a href="#page3">Three</a></li>
+				</ul>
+			</div>
+		 </div>
+
+		
+		<div role="main" class="ui-content">
+		<div data-demo-html="true">
+			<label for="textinput-hide" class="ui-hidden-accessible">Text Input:</label>
+			<input type="text" name="textinput-hide" id="textinput-hide" placeholder="Text input" value="">
+		</div>
+		<div data-demo-html="true">
+            <label for="slider-flip-m">Mini flip switch:</label>
+            <select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+                <option value="off">No</option>
+                <option value="on" selected>Yes</option>
+            </select>
+        </div>
+        <div data-demo-html="true">
+                <fieldset data-role="controlgroup">
+                    <legend>Radio buttons, vertical controlgroup:</legend>
+                        <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked">
+                        <label for="radio-choice-1">Cat</label>
+
+                        <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2">
+                        <label for="radio-choice-2">Dog</label>
+
+                        <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3">
+                        <label for="radio-choice-3">Hamster</label>
+
+                        <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4">
+                        <label for="radio-choice-4">Lizard</label>
+                </fieldset>
+        </div><!-- /demo-html -->
+		<div data-demo-html="true">
+			<a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left">Left</a>
+			<a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right">Right</a>
+			<a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top">Top</a>
+			<a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-bottom">Bottom</a>
+			<a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-notext">Icon only</a>
+		</div><!--/demo-html -->
+			<p><a href="#page1">Back to Page One</a></p>
+		</div>
+
+		<div data-role="footer">
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">button 1</a>
+			<a href="#" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-right">button 2</a>
+		</div>
+		
+	<!-- Start of third page -->	
+	</div>
+	<div data-role="page" id="page3">
+
+		<div data-role="header">
+			<h1>Page Three</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1">One</a></li>
+					<li><a href="#page2">Two</a></li>
+					<li><a href="#page3" class="ui-btn-active ui-state-persist">Three</a></li>
+				</ul>
+			</div>
+		 </div>
+
+		
+		<div role="main" class="ui-content">
+			<p>I'm the thrid in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is being clicked.</p>
+			<p><a href="#page2">Back to Page Two</a></p>
+			<div data-demo-html="true">
+				<form>
+                    <label for="slider-3">Slider:</label>
+                    <input type="range" name="slider-3" id="slider-3" data-track-theme="b" data-theme="b" min="0" max="100" value="50">
+				</form>
+                </div><!-- /demo-html -->
+		</div>
+
+		<div data-role="footer">
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">button 1</a>
+			<a href="#" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-right">button 2</a>
+		</div>
+		
+		
+	</div>
+</body>
+</html>
